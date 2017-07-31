@@ -11,7 +11,7 @@ Please use below steps to Start and run the project.
 
 2. Start the app and you can see server starting and client connection logs on console .
 
-3. you can see erverMonitoringApp.log file located at project location to find the logged server results.
+3. you can see ServerMonitoringApp.log file located at project class path location to find the logged server results.
 
 
 
