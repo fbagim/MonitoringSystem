@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.*;
 
+/**
+ * To creating individual server with host name and port
+ */
 public class Server extends Thread {
 
     final static Logger logger = Logger.getLogger(Server.class);
@@ -28,10 +31,18 @@ public class Server extends Thread {
         serviceOutages = new ArrayList();
     }
 
+    /**
+     * return created ServerSocket
+     * @return ServerSocket object
+     */
     public ServerSocket getServerSocket() {
         return serverSocket;
     }
 
+    /**
+     * to stop running server     *
+     * @throws IOException
+     */
     public void stopServer() throws IOException {
         b = false;
         serverSocket.close();
@@ -51,7 +62,10 @@ public class Server extends Thread {
         return host;
     }
 
-
+    /**
+     * get server service outage time list for the server     *
+     * @return ServiceOutage object list for the server
+     */
     public List<ServiceOutage> getServiceOutages() {
         return serviceOutages;
     }
@@ -113,7 +127,7 @@ public class Server extends Thread {
     }
 
     /**
-     * Start server to continus running  with 1000 ms sleep time.
+     * Start server to continues running  with 1000 ms sleep time.
      *
      */
     @Override

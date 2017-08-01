@@ -45,7 +45,7 @@ public class ConnectorService extends Thread {
 
         for (Caller caller : callers) {
             try {
-                // set grace time to  1000ms ,
+                // set grace time 1000ms to socket time out
                 new Socket(server.getServerSocket().getInetAddress().getHostAddress(), server.getPort()).setSoTimeout(1000);
                 caller.setStatusMessage("Send Message to Caller" + caller.getCallerName() + " : Server" + server.getHost() + ":port" + server.getPort() + "==> status==> Running");
             } catch (IOException e) {

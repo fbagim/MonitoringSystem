@@ -2,6 +2,9 @@ package com.yukon.test.minitoring.client;
 
 import org.apache.log4j.Logger;
 
+/**
+ *  Managed and store the caller data.
+ */
 public class Caller {
     final static Logger logger = Logger.getLogger(Caller.class);
 
@@ -21,14 +24,10 @@ public class Caller {
         return callerName;
     }
 
-    public void setCallerName(String callerName) {
-        this.callerName = callerName;
-    }
-
-    public void setCallerId(int callerId) {
-        this.callerId = callerId;
-    }
-
+    /**
+     * used to send server status messages to caller and calling from server
+     * @param statusMessage message from sever to Caller
+     */
     public void setStatusMessage(String statusMessage) {
         logger.info(statusMessage);
     }

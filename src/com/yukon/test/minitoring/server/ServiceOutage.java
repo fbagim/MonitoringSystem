@@ -2,6 +2,9 @@ package com.yukon.test.minitoring.server;
 
 import java.util.Calendar;
 
+/**
+ * To handel service outage information for the Servers
+ */
 public class ServiceOutage {
     private String description;
     private Calendar startTime;
@@ -15,36 +18,37 @@ public class ServiceOutage {
         this.description = description;
     }
 
+    /**
+     * check the status whether event is active or not     *
+     * @return boolean active
+     */
     public boolean isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-
+    /**
+     * return event description     *
+     * @return String description
+     */
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    /**
+     * return start time for service outage     *
+     * @return Calender start time
+     */
     public Calendar getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Calendar startTime) {
-        this.startTime = startTime;
-    }
 
+    /**
+     * return end time for service outage     *
+     * @return Calender end time
+     */
     public Calendar getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Calendar endTime) {
-        this.endTime = endTime;
-    }
 }

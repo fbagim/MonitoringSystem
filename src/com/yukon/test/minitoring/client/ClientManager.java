@@ -4,19 +4,18 @@ import java.util.*;
 
 import com.yukon.test.minitoring.server.Server;
 import com.yukon.test.minitoring.server.ServerManager;
-import org.apache.log4j.Logger;
 
+/***
+ * Responsible to handel all clients and functionalist's
+ */
 public class ClientManager {
-    final static Logger logger = Logger.getLogger(ClientManager.class);
 
-    private List<Caller> callerList;
     private ServerManager serverManager;
     private Hashtable<Server, List<Caller>> serverClinetMap;
     private ConnectorService connectorService;
 
     public ClientManager(ServerManager serverManager) {
         this.serverManager = serverManager;
-        callerList = new ArrayList<Caller>();
         serverClinetMap = new Hashtable();
     }
 

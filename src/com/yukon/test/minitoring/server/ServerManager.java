@@ -6,8 +6,12 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * To manage all running servers and connections
+ */
 public class ServerManager {
     final static Logger logger = Logger.getLogger(ServerManager.class);
+
     // Map to store servers with server id and server
     private Map<String, Server> servers;
 
