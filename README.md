@@ -13,5 +13,7 @@ Please use below steps to Start and run the project.
 
 3. you can see ServerMonitoringApp.log file located at project class path location to find the logged server results.
 
+Note : -please consider i dont have enought free time to complete JUnit tests for project.
+
 
 
